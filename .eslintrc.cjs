@@ -20,7 +20,7 @@ module.exports = {
     'prettier/prettier': ['error', prettierOptions],
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: true },
+      { allowConstantExport: true, allowSingleExtends: false },
     ],
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/typedef': [
@@ -43,6 +43,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'import/order': 'error',
     'import/no-duplicates': 'error',
-    'import/newline-after-import': 'error'
+    'import/newline-after-import': 'error',
   },
 }
