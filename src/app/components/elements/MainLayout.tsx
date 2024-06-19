@@ -1,21 +1,18 @@
 import React from 'react'
 import { BoxProps } from '@chakra-ui/react'
-import { Box } from '@chakra-ui/layout'
-// import { Layout, LayoutMain } from './Layout'
-
-interface IMainLayoutProps extends BoxProps {}
+import { Layout, LayoutMain } from './Layout'
+import { Header } from './Header'
+import { Footer } from './Footer'
 
 /**
  * @returns Component Main Layout
  */
-export const MainLayout: React.FC<IMainLayoutProps> = ({
-  children,
-  ...props
-}) => {
+export const MainLayout: React.FC<BoxProps> = ({ children, ...props }) => {
   return (
-    <Box {...props}>
-      {/* <Header /> */}
-      <Box>{children}</Box>
-    </Box>
+    <Layout {...props}>
+      <Header />
+      <LayoutMain>{children}</LayoutMain>
+      <Footer />
+    </Layout>
   )
 }
